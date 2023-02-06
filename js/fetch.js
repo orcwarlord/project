@@ -7,19 +7,15 @@ function loadData(url,callback)
 			'Content-Type': 'application/json',
 		},
 	};
-	// avoid cors error
-	
-
 
 	fetch(url, options).then(function(response) {
-		// console.log(response.json);
 		return response.json();
 	}).then(function(json) {
 		callback(json)
 	});
 } //end of loadData()
 
-// loadData(`https://rawg-video-games-database.p.rapidapi.com/games?key=2e5072210c754f0f951b577972c160ba&ids=${searchString}&page_size=40`,populateTopGames);
+
 
 // function createHandler(plant)
 // {
@@ -32,7 +28,7 @@ function loadData(url,callback)
 
 function populateList(plants)
 {
-	console.log(plants.loadData);
+	console.log(plants);
 	// const gamesFragment = document.createDocumentFragment();
 	// games.results.forEach(function(game){
 	// 	const newLi=document.createElement("li");

@@ -1,7 +1,6 @@
 
 import express from 'express';
 import fetch from 'node-fetch';
-// const fetch = require('node-fetch');
 
 const app = express();
 
