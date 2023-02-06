@@ -1,4 +1,4 @@
-function loadData(url, callback)
+function loadData(url,callback)
 {	
 	const options = {
 		method: 'GET',
@@ -17,22 +17,6 @@ function loadData(url, callback)
 
 
 
-
-
-function populateList(plants)
-{
-	console.log(plants.data);
-	
-} //end of populateList, do not remove this line
-
-function init(){
-	loadData("http://localhost:3000/data",populateList);
-	
-}
-
-init();
-
-
 // function createHandler(plant)
 // {
 // 	//this function uses a closure to associate data with a hyperlink
@@ -42,7 +26,10 @@ init();
 // 	}
 // }
 
-// const gamesFragment = document.createDocumentFragment();
+function populateList(plants)
+{
+	console.log(plants.data);
+	// const gamesFragment = document.createDocumentFragment();
 	// games.results.forEach(function(game){
 	// 	const newLi=document.createElement("li");
 	// 	const newLink=document.createElement("a");
@@ -56,3 +43,11 @@ init();
 	// })
 	// const gamesList=document.querySelector("#games-list");
 	// gamesList.appendChild(gamesFragment);
+} //end of populateList, do not remove this line
+
+function init(){
+	loadData("http://localhost:3000/data",populateList);
+	
+}
+
+init();

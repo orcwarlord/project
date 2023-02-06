@@ -17,7 +17,7 @@ app.get('/api', async (req, res) => {
   console.log(endpoint);
   try {
     const response = await fetch(
-      `https://trefle.io/api/v1/plants?token=zHMvcTIkbKjwQLy_SB1SuQZkjo0s7N-DsuRyvAvow3I`
+      `https://trefle.io/api/v1/${endpoint}?token=zHMvcTIkbKjwQLy_SB1SuQZkjo0s7N-DsuRyvAvow3I`
     );
     const data = await response.json();
     res.json(data);
