@@ -1,0 +1,35 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+header {
+            background-color: #f1f1f1;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: green;
+        }
+        nav {
+            float: left;
+            width: 100%;
+            background: #ccc;
+            overflow: auto;
+        }
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        nav li {
+            float: left;
+        }
+        nav a {
+            display: block;
+            padding: 6px 12px;
+            color: #000;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #000;
+            color: #fff;
+        }

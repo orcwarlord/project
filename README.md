@@ -65,4 +65,19 @@ Add a virtual host:
 </VirtualHost>
 ```
 
+## Install and configure Tailwind
+
+` npm install tailwindcss
+
+` npx tailwindcss init
+
+Add next to input.css:
+```
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+```
+
+` npx tailwindcss -i ./src/input.css -o ./public/css/main.css --watch 
+
 
