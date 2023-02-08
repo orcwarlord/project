@@ -41,6 +41,22 @@ app.get('/api', async (req, res) => {
   }
 });
 
+app.get('/search', async (req, res) => {
+  try {
+    // const endpoint = req.query.endpoint;
+    const searchQuery = req.query.searchQuery;
+
+    const response = await fetch(
+      `https://trefle.io/api/v1/plants/search?token=zHMvcTIkbKjwQLy_SB1SuQZkjo0s7N-DsuRyvAvow3I&q=${searchQuery}`
+    );
+    const data = await response.json();
+    res.json(data);
+  } catch (error) {
+    console.error(error);
+    res.sendStatus(500);
+  }
+});
+
 app.listen(3000, () => {
   console.log('Server started on http://localhost:3000');
 });
